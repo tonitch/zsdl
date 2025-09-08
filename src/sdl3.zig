@@ -2382,24 +2382,24 @@ pub const Keycode = enum(u32) {
 
 /// Valid key modifiers (possibly OR'd together).
 pub const Keymod = enum(u16) {
-    pub const none: u16 = 0x0000;
-    pub const lshift: u16 = 0x0001;
-    pub const rshift: u16 = 0x0002;
-    pub const level5: u16 = 0x0004;
-    pub const lctrl: u16 = 0x0040;
-    pub const rctrl: u16 = 0x0080;
-    pub const lalt: u16 = 0x0100;
-    pub const ralt: u16 = 0x0200;
-    pub const lgui: u16 = 0x0400;
-    pub const rgui: u16 = 0x0800;
-    pub const num: u16 = 0x1000;
-    pub const caps: u16 = 0x2000;
-    pub const mode: u16 = 0x4000;
-    pub const scroll: u16 = 0x8000;
-    pub const ctrl: u16 = lctrl | rctrl;
-    pub const shift: u16 = lshift | rshift;
-    pub const alt: u16 = lalt | ralt;
-    pub const gui: u16 = lgui | rgui;
+    none = 0x0000,
+    lshift = 0x0001,
+    rshift = 0x0002,
+    level5 = 0x0004,
+    lctrl = 0x0040,
+    rctrl = 0x0080,
+    lalt = 0x0100,
+    ralt = 0x0200,
+    lgui = 0x0400,
+    rgui = 0x0800,
+    num = 0x1000,
+    caps = 0x2000,
+    mode = 0x4000,
+    scroll = 0x8000,
+    pub const ctrl = .lctrl | .rctrl;
+    pub const shift = .lshift | .rshift;
+    pub const alt = .lalt | .ralt;
+    pub const gui = .lgui | .rgui;
 };
 
 pub const KeyboardId = u32;
